@@ -54,7 +54,18 @@ def file_classify(folder,file):
 		folder.video += 1
 	else:
 		folder.other += 1
+		classify_warn(file)
 	return folder
+
+
+
+#分类中含有未知类型（归类至other）
+def classify_warn(fail_msg):
+	#print(fail_msg, end='')
+    txt = open('警告信息', 'a', encoding="utf-8")
+    txt.write('{}\n'.format(fail_msg))
+    txt.close()
+
 
 
 #定义统计目录的函数
