@@ -1,7 +1,5 @@
 import os
 
-
-
 #创建一个类存储文件夹下内容分类
 class InFolder:
 	address = ''
